@@ -1,0 +1,109 @@
+<div class="col-12 col-sm-12 login-background">
+    <div class="row">
+        <div class="col-lg-4 col-sm-1"></div>
+        <div class="col-lg-4 col-sm-10 text-center ">
+            <img src="/assets/img/logo3.png" style="width: 58%;margin-bottom:-10px;" />
+            <p style="margin-top: 10px;text-shadow: 2px 2px 2px #4d4d4d;"><strong style="color:#290f48;font-size: 15px;">Empowering Intelligent Enterprises</strong></p>
+            <div class="row">
+                <div class="col-lg-12 col-xs-12 login-center-background">
+                    <nav>
+                        <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#login" role="tab" aria-controls="nav-home" aria-selected="true">Login</a>
+                            <a class="nav-item nav-link " id="nav-home-tab" data-toggle="tab" href="#register" role="tab" aria-controls="nav-home" aria-selected="true">Register</a>
+                        </div>
+                    </nav>
+                    <div class="tab-content py-3 px-3 px-sm-0 login-padding" id="nav-tabContent">
+
+                        <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="nav-profile-tab">
+
+                            <h4 style="margin-bottom:38px;">Login</h4>
+                            <div class="form-group" style="margin-bottom: 2rem;">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text log-icon-back" id="basic-addon1">
+                                            <i class="fas fa-user"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="email" [(ngModel)]="loginObj.userName">
+                                </div>
+                            </div>
+                            <div class="form-group" style="margin-bottom: 2rem;">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text log-icon-back" id="basic-addon1">
+                                            <i class="fas fa-unlock-alt"></i>
+                                        </span>
+                                    </div>
+                                    <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" name="password" [(ngModel)]="loginObj.password">
+                                </div>
+                            </div>
+
+
+
+                            <button type="submit" class="btn btn btn-warning btn-sm btn-block" (click)="login()">Login</button>
+
+                            <div class="col-12" style="margin-top: 20px;">
+                                <div class="row">
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="nav-profile-tab">
+                            <form>
+                                <h4 style="margin-bottom:38px;">Register</h4>
+                                <div class="form-group" style="margin-bottom: 2rem;">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text log-icon-back" id="basic-addon1">
+                                                <i class="fas fa-user"></i>
+                                            </span>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="registerusername" [(ngModel)]="registerObj.userName">
+                                    </div>
+                                </div>
+
+                                <div class="form-group" style="margin-bottom: 2rem;">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text log-icon-back" id="basic-addon1">
+                                                <i class="fas fa-user"></i>
+                                            </span>
+                                        </div>
+                                        <input type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1" name="email" [(ngModel)]="registerObj.email">
+                                    </div>
+                                </div>
+                                <div class="form-group" style="margin-bottom: 2rem;">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text log-icon-back" id="basic-addon1">
+                                                <i class="fas fa-unlock-alt"></i>
+                                            </span>
+                                        </div>
+                                        <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" name="password" [(ngModel)]="registerObj.password">
+                                    </div>
+                                </div>
+
+                                <div class="form-group" style="margin-bottom: 2rem;">
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text log-icon-back" id="basic-addon1">
+                                                <i class="fas fa-unlock-alt"></i>
+                                            </span>
+                                        </div>
+                                        <input type="password" class="form-control" placeholder="Confirm Password" aria-label="ConfirmPassword" aria-describedby="basic-addon1" name="Confirmpassword" [(ngModel)]="registerObj.confirmPassword">
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn btn-warning btn-sm btn-block" (click)="register()">Register</button>
+
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

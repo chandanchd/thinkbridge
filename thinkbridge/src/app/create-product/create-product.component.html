@@ -1,0 +1,47 @@
+<div class="card m-2">
+    <div class="card-header text-white bg-primary">
+        Create product Form
+    </div>
+    <div class="card-body">
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="name">Name</label>
+                <span class="error-msg-span float-right">{{validationMessage.name}}</span>
+                <input type="text" class="form-control" name="name" [(ngModel)]="product.name" id="name">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="description">Description</label>
+                <span class="error-msg-span float-right">{{validationMessage.description}}</span>
+                <input type="text" class="form-control" name="description" id="description"
+                    [(ngModel)]="product.description">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="price">Price</label>
+                <span class="error-msg-span float-right">{{validationMessage.price}}</span>
+                <input type="number" class="form-control" name="price" id="price" [(ngModel)]="product.price">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="quantiny">Quantity</label>
+                <span class="error-msg-span float-right">{{validationMessage.quantiny}}</span>
+                <input type="text" class="form-control" name="quantiny" id="quantiny" [(ngModel)]="product.quantiny">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="date">Date</label>
+                <span class="error-msg-span float-right">{{validationMessage.date}}</span>
+                <input type="date" class="form-control" name="date" id="date" [(ngModel)]="product.date">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="date">Image</label>
+                <input type="file"
+                id="file"
+                (change)="handleFileInput($event.target.files)">
+            </div>
+
+
+        </div>
+
+    </div>
+    <div class="card-footer bg-transparent"><button type="button" class="btn btn-primary btn-sm float-right"
+            (click)="addProduct()">Create</button> <button type="button" class="btn btn-success btn-sm float-right mr-1"
+            (click)="goToList()">Product List</button></div>
+</div>

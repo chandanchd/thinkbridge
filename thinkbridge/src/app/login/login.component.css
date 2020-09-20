@@ -1,0 +1,55 @@
+.login-background {
+    padding: 38px 0px 0px 0px;
+    background-image: url(/assets/img/back2.png);
+    background-size: cover;
+    overflow: hidden;
+    height: auto;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+}
+
+.login-center-background {
+    background-color: rgb(221 224 229 / 73%);
+    padding: 0px 0px;
+    border-radius: 7px;
+    box-shadow: 1px 1px 6px #070707;
+}
+
+.login-text {
+    margin-bottom: 36px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.log-icon-back {
+    background-color: #663E96;
+    border: 0.5px solid #663E96;
+    color: white;
+}
+
+.login-padding {
+    padding: 30px 41px !important;
+}
+
+.btn-warning {
+    color: #ffffff !important;
+    background-color: #1a52d2 !important;
+    border-color: #1a52d2 !important;
+    padding: 5px 0px;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    color: #ffffff;
+    background-color: #663E96;
+    border-color: #663E96 #663E96 #200101;
+}
+
+.btn-warning {
+    background-color: #663E96 !important;
+}

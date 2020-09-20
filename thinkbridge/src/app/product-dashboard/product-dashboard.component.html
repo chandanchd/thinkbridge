@@ -1,0 +1,62 @@
+<div class="card m-2">
+    <div class="card-header text-white bg-primary">
+        Product List
+    </div>
+    <div class="card-body">
+        <table class="table table-striped table-bordered table-hover table-sm" *ngIf="products.length>0">
+            <thead>
+                <tr>
+                    <th scope="col">Sl No</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Date</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of products; let i=index;">
+                    <th scope="row">{{i+1}}</th>
+                    <td>{{item.name}}</td>
+                    <td>{{item.description}}</td>
+                    <td>{{item.price}}</td>
+                    <td>{{item.quantiny}}</td>
+                    <td>{{item.date}}</td>
+                    <td>
+                        <button type="button" class="btn btn-success btn-sm"
+                            (click)="viewProduct(item.productId)">View</button>&nbsp;&nbsp;
+                        <button type="button" class="btn btn-primary btn-sm"
+                            (click)="editProduct(item.productId)">Edit</button>&nbsp;&nbsp;<button type="button"
+                            class="btn btn-danger btn-sm" (click)="deleteProduct(item.productId)">Delete</button></td>
+                </tr>
+
+            </tbody>
+        </table>
+        <p *ngIf="products.length==0" class="text-center mt-2 text-info">There is no Product is available, Click (add)
+            to
+            Add Product</p>
+    </div>
+    <div class="card-footer bg-transparent"><button type="button" class="btn btn-primary btn-sm float-right"
+            (click)="addProduct()">Add</button></div>
+</div>
+
+<div class="modal" tabindex="-1" id="deleteProductModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-primary text-white">
+                <h5 class="modal-title">Delete Product</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Are you sure, want to delete this Product?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                <button type="button" class="btn btn-primary" (click)="confirmDeleteProduct()">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>
